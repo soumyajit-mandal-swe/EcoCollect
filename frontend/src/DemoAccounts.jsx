@@ -8,6 +8,11 @@ const accounts = [
     role: 'Admin',
   },
   {
+    name: 'Soumyajit Mandal',
+    email: 'soumyajit@example.com',
+    role: 'User',
+  },
+  {
     name: 'Sourja Sinha',
     email: 'sourja@example.com',
     role: 'User',
@@ -56,4 +61,3 @@ export default function DemoAccounts() {
     </section>
   );
 }
-
