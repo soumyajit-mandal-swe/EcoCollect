@@ -1,6 +1,14 @@
 
 import { Users } from 'lucide-react';
 
+const teamMembers = [
+  'Soumyajit Mandal',
+  'Sourja Sinha',
+  'Harsh Kumar Jha',
+  'Sayandip Rout',
+  'Aditya Chaubey',
+];
+
 const accounts = [
   {
     name: 'Soumyajit Mandal',
@@ -28,13 +36,34 @@ export default function DemoAccounts() {
   return (
     <section
       className="demo-accounts"
-      aria-label="EcoCollect demonstration accounts"
+      aria-label="EcoCollect team and demo accounts"
     >
       <div className="demo-accounts-heading">
         <Users size={18} />
         <div>
-          <h3>Meet the EcoCollect team</h3>
-          <p>Explore EcoCollect using our demonstration accounts.</p>
+          <h3>Meet the EcoCollect Team</h3>
+          <p>Our DBMS mini-project team members.</p>
+        </div>
+      </div>
+
+      <ul>
+        {teamMembers.map((name) => (
+          <li key={name}>
+            <span>
+              <strong>{name}</strong>
+            </span>
+            <span className="demo-role">
+              Member
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="demo-accounts-heading">
+        <Users size={18} />
+        <div>
+          <h3>Demo Login Accounts</h3>
+          <p>Use one of these accounts to explore EcoCollect.</p>
         </div>
       </div>
 
