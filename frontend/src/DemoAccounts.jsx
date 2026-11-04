@@ -4,23 +4,18 @@ import { Users } from 'lucide-react';
 const accounts = [
   {
     name: 'Soumyajit Mandal',
-    email: 'soumyajit@example.com',
+    email: 'admin@example.com',
+    role: 'Admin',
   },
   {
     name: 'Sourja Sinha',
     email: 'sourja@example.com',
+    role: 'User',
   },
   {
     name: 'Harsh Kumar Jha',
     email: 'harsh@example.com',
-  },
-  {
-    name: 'Sayandip Rout',
-    email: 'sayandip@example.com',
-  },
-  {
-    name: 'Aditya Chaubey',
-    email: 'aditya@example.com',
+    role: 'User',
   },
 ];
 
@@ -28,13 +23,13 @@ export default function DemoAccounts() {
   return (
     <section
       className="demo-accounts"
-      aria-label="EcoCollect team"
+      aria-label="EcoCollect demonstration accounts"
     >
       <div className="demo-accounts-heading">
         <Users size={18} />
         <div>
           <h3>Meet the EcoCollect team</h3>
-          <p>Our DBMS mini-project team.</p>
+          <p>Explore EcoCollect using our demonstration accounts.</p>
         </div>
       </div>
 
@@ -47,17 +42,18 @@ export default function DemoAccounts() {
                 {account.email}
               </span>
             </span>
-            <span className="demo-role">User</span>
+
+            <span
+              className={`demo-role ${
+                account.role === 'Admin' ? 'demo-admin' : ''
+              }`}
+            >
+              {account.role}
+            </span>
           </li>
         ))}
       </ul>
-
-      <div className="demo-passwords">
-        <span>
-          Admin email
-          <code>admin@example.com</code>
-        </span>
-      </div>
     </section>
   );
 }
+
